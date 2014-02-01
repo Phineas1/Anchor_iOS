@@ -23,7 +23,7 @@
                          // alert('start');
                           navigator.geolocation.watchPosition(onSuccess, onError);
             all_notifs = JSON.parse(window.localStorage.getItem('all_notifs'));
-            all_notifs = all_notifs || JSON.stringify([]);
+                          all_notifs = all_notifs || [];
                           });
     function distance(lat,lon,position)
 	{
@@ -35,19 +35,22 @@
     {
         alert(err);
     }
-    
+    var Fnum='+17735699419';
     function onSuccess(position) {
         //alert('sdsd');
-        alert(all_notifs.length);
+       // alert(all_notifs.length);
 		for (var i=0;i<all_notifs.length;i++) {
-            
+           // alert(all_notifs[i]);
             
 			if (distance(all_notifs[i].dest.lat,all_notifs[i].dest.lon,position)<=threshold)
 			{
 				//send text
 				//dismiss destination
-				alert("REACHED");
-				//$.getJSON('http://anchor-text.herokuapp.com/sms/'+all_notifs[i].phone+'/'+'Ajay'+'/'+all_notifs[i].message,function(data,stat){});
+				//alert("REACHED");
+				$.getJSON('http://anchor-text.herokuapp.com/sms/'+Fnum+'/'+'Ajay'+'/'+all_notifs[i].message,function(data,stat){});
+                
+                all_notifs=[];
+                window.localStorage.setItem('all_notifs',JSON.stringify(all_notifs));
 			}
 		}
 		

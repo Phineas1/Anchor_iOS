@@ -22,8 +22,8 @@ function Save()
     //alert('wwwww');
 	var new_notif = JSON.parse(window.localStorage.getItem('new_notif'));
 	new_notif = new_notif || {};
-	var new_notif = JSON.parse(window.localStorage.getItem('all_notifs'));
-	all_notifs=all_notifs || JSON.stringify([]);
+	var all_notifs = JSON.parse(window.localStorage.getItem('all_notifs'));
+	all_notifs=all_notifs || [];
 	all_notifs.push(new_notif);
 	new_notif={};
 	window.localStorage.setItem('new_notif',JSON.stringify(new_notif));
