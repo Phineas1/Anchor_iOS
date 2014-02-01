@@ -8,6 +8,10 @@
 
 <link rel="stylesheet" href="stylesheet.css">
 
+
+<script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+<script type="test/javascript" src="./js/jquery-cookie.js"></script>
+<script type="text/javascript" src="./js/contacts.js"></script>
 </head>
 
 <body>
@@ -23,7 +27,7 @@
         </div>
         
         <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/phineas.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Phineas</h4>
@@ -31,7 +35,7 @@
          </div>
          
           <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/ryan.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Ryan</h4>
@@ -39,7 +43,7 @@
          </div>
          
          <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/yaakov.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Yaakov</h4>
@@ -47,7 +51,7 @@
          </div>
          
          <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/sohee.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>So-Hee</h4>
@@ -55,7 +59,7 @@
          </div>
          
           <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/josh.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Josh</h4>
@@ -63,7 +67,7 @@
          </div>
          
          <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/ajay.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Ajay</h4>
@@ -71,24 +75,28 @@
          </div>
         
         
-        
+        <!--
         <div class="button">
         <h2>Search Contacts</h2>
         	<div class="buttonBox">
             	<img style="padding-top:28px; padding-left:25px;" src="Assets/Plus.png"</a>
             </div>
         </div>
+		-->
         
-        <a href="message.html">
-        <div class="button">
-        <h2>Next</h2>
-        	<div class="buttonBox">
+        <form id="form" METHOD="GET" ACTION="message.html" action="demo_form.asp">
+        
+        <div class="textBox" style="margin-top:40px;">
+        
+        <input id="phone" type="text" name="phone" placeholder="  Enter Phone Number">
+        <button type="button" onclick="setContact()"/>
+        <div class="buttonBox" style="display:inline;">
         		<div class="buttonArrow">
             	</div>
             </div>
         </div>
-        </a>
-
+        </form>
+		
 	</div>
 </body>
 </html>

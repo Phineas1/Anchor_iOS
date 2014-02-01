@@ -8,6 +8,9 @@
 
 <link rel="stylesheet" href="stylesheet.css">
 
+<script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+<script type="test/javascript" src="./js/jquery-cookie.js"></script>
+<script type="text/javascript" src="./js/message.js"></script>
 </head>
 
 <body>
@@ -18,9 +21,17 @@
             </div>
         </div>
         
+        
+        
+        <form id="form" METHOD="LINK" ACTION="finalPreview.html" action="demo_form.asp">
+        
         <div class="messageBox" style="margin-top:20px;">
-        <h1>Enter New Message</h1>
+        
+        <input id="message" type="text" name="message" placeholder="  Enter New Message" onkeypress="setMessage(event)">
+        <button id="messageButton" type="submit" />
+      
         </div>
+        </form>
         
         <div class="smallHeading">
         	<h3>Recently Sent</h3>

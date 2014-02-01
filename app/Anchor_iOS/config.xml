@@ -13,7 +13,7 @@
         Ryan Flood
     </author>
 
-    <access origin="*"/>
+    <access uri="*" origin="*" />
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />

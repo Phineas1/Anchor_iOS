@@ -7,6 +7,48 @@ body{
 	margin-top:0px;
 }
 
+input{
+	width:530px;
+	height:70px;
+	background:#C1CFD9;
+	font-family: "Blanch";
+	font-weight: normal;
+	font-size:60px;
+	margin:0px;
+	padding-left:10px;
+	border:none;
+	outline:none;
+}
+
+button {
+	width:70px;
+	height:70px;
+	background:#9EB3BF;
+	border:none;
+	margin-top:-69px;
+	padding:0px;
+	float:right;
+}
+
+
+#message{
+	width:600px;
+	height:70px;
+	background:#C1CFD9;
+	font-family: "Blanch";
+	font-weight: normal;
+	font-size:60px;
+	margin:0px;
+	padding-left:10px;
+	border:none;
+	float:none;
+	outline:none;
+}
+
+#messageButton{
+	border:none
+}
+
 .container {
 	width:640px;
 	height:980px;
@@ -20,6 +62,14 @@ body{
 }
 
 .button {
+	width:600px;
+	height:70px;
+	background:#C1CFD9;
+	margin-left:20px;
+	margin-top:10px;
+}
+
+.textBox {
 	width:600px;
 	height:70px;
 	background:#C1CFD9;

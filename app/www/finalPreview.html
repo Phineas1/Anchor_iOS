@@ -8,6 +8,29 @@
 
 <link rel="stylesheet" href="stylesheet.css">
 
+<script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+<script type="test/javascript" src="./js/jquery-cookie.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+var new_notif = JSON.parse(window.localStorage.getItem('new_notif'));
+
+$('#finalDest').html(new_notif.dest.street);
+$('#finalMessage').html(new_notif.message);
+});
+function Save()
+{
+    //alert('wwwww');
+	var new_notif = JSON.parse(window.localStorage.getItem('new_notif'));
+	new_notif = new_notif || {};
+	var new_notif = JSON.parse(window.localStorage.getItem('all_notifs'));
+	all_notifs=all_notifs || JSON.stringify([]);
+	all_notifs.push(new_notif);
+	new_notif={};
+	window.localStorage.setItem('new_notif',JSON.stringify(new_notif));
+	window.localStorage.setItem('all_notifs',JSON.stringify(all_notifs));
+	form.submit();
+}
+</script>
 </head>
 
 <body>
@@ -23,7 +46,7 @@
         </div>
         
         <div class="button">
-        <h2>1340 Wightman Street</h2>
+        <h2 id="finalDest">1340 Wightman Street</h2>
         <a href="destination.html">
         	<div class="buttonBox">
         		<img style="padding-top:21px; padding-left:20px;" src="Assets/editIcon.png"</a>
@@ -36,7 +59,7 @@
         </div>
         
         <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/phineas.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Phineas</h4>
@@ -44,7 +67,7 @@
          </div>
          
           <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/ryan.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Ryan</h4>
@@ -52,7 +75,7 @@
          </div>
          
          <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/yaakov.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Yaakov</h4>
@@ -60,7 +83,7 @@
          </div>
          
          <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/sohee.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>So-Hee</h4>
@@ -68,7 +91,7 @@
          </div>
          
           <div class="contact">
-        	<div class="imageBox" style="margin-top:20px;">
+        	<div class="imageBox" style="margin-top:20px; background-image:url(Assets/People%20Images/josh.jpg)">
         	</div>
         	<div class="contactName">
         	<h4>Josh</h4>
@@ -94,7 +117,7 @@
         
         
         <div class="button">
-        <h2>Got here safe!</h2>
+        <h2 id="finalMessage">Got here safe!</h2>
         	<a href="message.html">
         	<div class="buttonBox">
             	<img style="padding-top:21px; padding-left:20px;" src="Assets/editIcon.png"</a>
@@ -103,10 +126,11 @@
         </div>
         
         <a href="index.html">
-        <div class="buttonFinish">
+        <div class="buttonFinish" onclick="Save()">
         <h2 style="padding-left:250px;">Finish</h2>
         </div>
         </a>
+        
 
 	</div>
 </body>
