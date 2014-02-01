@@ -8,7 +8,12 @@
 
 <link rel="stylesheet" href="stylesheet.css">
 
-
+<div id="fb-root"></div>
+<script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="phonegap.js"></script>
+<script src="cdv-plugin-fb-connect.js"></script>
+<script src="facebook-js-sdk.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.js"></script>
 
 
@@ -22,7 +27,7 @@
             </div>
         </div>
         
-        <div class="button" style="margin-top:20px;">
+        <div class="button" style="margin-top:20px;" onclick="facebookWallPost()">
         <h1>Enter New Destination</h1>
         </div>
         
